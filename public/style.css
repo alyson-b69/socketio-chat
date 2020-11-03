@@ -135,6 +135,7 @@ ul#users h2 {
   display: flex;
   flex-direction: column;
   font-size: 0.8em;
+  flex-shrink: 0;
 }
 
 .messages li.message {
