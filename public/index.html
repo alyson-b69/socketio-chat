@@ -1,0 +1,32 @@
+<html>
+<head>
+    <link href="/style.css" rel="stylesheet"/>
+</head>
+<body>
+<div id="login">
+    <h2>MEOW BOX</h2>
+    <form id="login-form">
+        <label for="username">What's your kitten name ?</label>
+        <input type="text" id="username"/>
+        <button type="submit">LET'S TALK !</button>
+    </form>
+</div>
+<div id="chat">
+    <div id="wrapper-users">
+    <h2>Kittens here</h2>
+    <ul id="users"></ul>
+    </div>
+
+    <div id="wrapper">
+    <ul class="messages" id="messages"></ul>
+    <form id="form">
+        <input type="text" name="message" id="message" autocomplete="off"/>
+        <input type="submit" value="&#8593;" id="submit-message"/>
+    </form>
+    </div>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/message.js"></script>
+<script src="/login.js"></script>
+</body>
+</html>
