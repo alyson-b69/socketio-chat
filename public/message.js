@@ -21,7 +21,7 @@ function writeMessage(message, type = "message") {
       ":" +
       ("0" + dateNow.getMinutes()).slice(-2);
 
-    li.innerHTML = `<strong>&#128571  ${message.username}</strong>${message.message}<span>🕗  ${date} </span>`;
+    li.innerHTML = `<strong>&#128571  ${message.username}</strong><p>${message.message}</p><span>🕗  ${date} </span>`;
   }
   li.classList.add(type);
   messages.appendChild(li);
