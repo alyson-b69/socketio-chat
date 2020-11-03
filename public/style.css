@@ -134,7 +134,7 @@ ul#users h2 {
   text-align: left;
   background: #c2e7f3;
   list-style-type: none;
-  padding: 3%;
+  padding: 1%;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -219,5 +219,9 @@ li.broadcast {
   #wrapper {
     width: 100%;
     height: 70vh;
+  }
+
+  .messages > li {
+    padding: 3%;
   }
 }
