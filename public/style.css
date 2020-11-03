@@ -193,6 +193,8 @@ input#submit-message {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  padding: 0;
+  font-weight: bold;
 }
 
 input#submit-message:hover {
