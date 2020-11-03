@@ -106,15 +106,25 @@ ul#users h2 {
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 10px;
-  display: flex;
-  flex-direction: column;
   background: #ffffff;
   border: solid 10px #ffff;
   margin-top: 0;
   margin-bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
-.messages li {
+.messages > li {
   margin-bottom: 10px;
   width: 60%;
   text-align: left;
@@ -176,7 +186,7 @@ li.broadcast {
   font-style: italic;
 }
 
-@media screen and (max-device-width: 768px), screean and (max-width: 768px) {
+@media screen and (max-device-width: 768px), screen and (max-width: 768px) {
   #login {
     width: 80%;
   }
