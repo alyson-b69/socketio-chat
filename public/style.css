@@ -176,7 +176,7 @@ li.broadcast {
   font-style: italic;
 }
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   #login {
     width: 80%;
   }
@@ -195,3 +195,4 @@ li.broadcast {
     height: 70vh;
   }
 }
+
