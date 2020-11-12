@@ -4,6 +4,12 @@ const messageForm = document.querySelector("#form");
 const messages = document.querySelector("#messages");
 const usersList = document.querySelector("#users");
 
+String.prototype.toHtmlEntities = function () {
+  return this.replace(/./gm, function (s) {
+    return s.match(/[a-z0-9\s]+/i) ? s : "&#" + s.charCodeAt(0) + ";";
+  });
+};
+
 function writeMessage(message, type = "message") {
   let li = document.createElement("li");
   if (type === "broadcast") {
@@ -30,7 +36,7 @@ function writeMessage(message, type = "message") {
 
 messageForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  const message = messageInput.value;
+  const message = messageInput.value.toHtmlEntities();
   if (message !== "") {
     socket.emit("message", message);
     writeMessage({ username: "me", message }, "me");
